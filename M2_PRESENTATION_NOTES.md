@@ -68,3 +68,4 @@ Use these concise, point-by-point explanations when presenting each of the six M
 - **File to Open and Display:**
   - View Pareto trade-off curve: `12_own_target_and_tradeoff/comparison_graphs/tradeoff_pareto_curve.png`
   - View targets table: `12_own_target_and_tradeoff/target_vs_actual.csv`
+

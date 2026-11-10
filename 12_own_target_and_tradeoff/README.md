@@ -57,3 +57,4 @@ cd "C:\Users\Sudhiksha\Downloads\Edge AI - Assignment 1"
 # 2. Re-generate comparative trade-off graphs and CSV metrics
 python 12_own_target_and_tradeoff/generate_tradeoff_graphs.py
 ```
+

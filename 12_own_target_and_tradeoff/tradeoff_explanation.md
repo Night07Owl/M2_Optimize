@@ -36,3 +36,4 @@ On CPU execution, dynamic quantization introduces a slight dequantization math o
 
 ### 8. Why is this optimized model suitable for my enclosure detection project?
 In an industrial optical inspection or assembly line, camera frames arrive at 15–30 FPS. Our optimized model runs in **1.38 ms on GPU** and **8.9 ms on CPU**, meaning vision inference accounts for only a tiny fraction of the frame time. The small 506 KB footprint allows instant loading and deployment on cost-effective edge PCs, industrial robots, or inspection cameras without requiring massive computing clusters."
+

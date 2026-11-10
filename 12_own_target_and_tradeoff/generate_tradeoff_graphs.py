@@ -119,3 +119,4 @@ if __name__ == "__main__":
     import matplotlib.patches as patches
     generate_graphs()
     generate_csv()
+

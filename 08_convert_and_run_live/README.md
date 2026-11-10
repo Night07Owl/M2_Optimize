@@ -72,3 +72,4 @@ python 08_convert_and_run_live/live_inference.py --camera 0 --model models/enclo
 # 4. Run Live Camera Detection on Dedicated GPU Accelerator (NVIDIA RTX 5070)
 python 08_convert_and_run_live/live_inference.py --camera 0 --model models/enclosure_detector_int8.onnx --gpu
 ```
+

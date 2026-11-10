@@ -163,3 +163,4 @@ def validate_onnx_model(
 
 if __name__ == "__main__":
     validate_onnx_model()
+

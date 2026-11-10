@@ -133,3 +133,4 @@ if __name__ == "__main__":
     parser.add_argument("--opset", type=int, default=17, help="ONNX opset version")
     args = parser.parse_args()
     export_model_to_onnx(args.output, args.opset)
+

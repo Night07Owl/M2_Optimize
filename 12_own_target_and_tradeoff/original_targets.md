@@ -55,3 +55,4 @@ Because a specific pre-training mAP number was not hardcoded in M1, the followin
 | **CPU Model Latency** | Formally Set M2 Target | $< 15.0\text{ ms}$ | **$8.901\text{ ms}$** | **MET** |
 | **GPU Model Latency** | Formally Set M2 Target | $< 5.0\text{ ms}$ | **$1.382\text{ ms}$** | **EXCEEDED** |
 | **GPU Model Throughput** | Formally Set M2 Target | $> 200.0\text{ FPS}$ | **$722.36\text{ FPS}$** | **EXCEEDED** |
+

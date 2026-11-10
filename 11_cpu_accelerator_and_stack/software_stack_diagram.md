@@ -101,3 +101,4 @@
 | **Hardware Accelerator** | **NVIDIA GeForce RTX 5070 Laptop GPU** | 12,227 MiB GDDR6/GDDR7 VRAM, Driver 617.42 |
 | **Accelerator Interface API** | Direct3D 12 Feature Level 12_2 | DirectML (`DmlExecutionProvider`) |
 | **Visual Evidence Diagram** | High-resolution publication diagram | [`software_stack_diagram.png`](software_stack_diagram.png) |
+

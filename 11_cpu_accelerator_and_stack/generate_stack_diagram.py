@@ -142,3 +142,4 @@ def generate_task5_artifacts(output_dir="11_cpu_accelerator_and_stack"):
 
 if __name__ == "__main__":
     generate_task5_artifacts()
+

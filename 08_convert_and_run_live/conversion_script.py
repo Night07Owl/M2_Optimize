@@ -148,3 +148,4 @@ if __name__ == "__main__":
     parser.add_argument("--output", default="models/enclosure_detector_int8.onnx")
     args = parser.parse_args()
     convert_to_int8(args.input, args.output)
+

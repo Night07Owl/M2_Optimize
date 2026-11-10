@@ -261,3 +261,4 @@ if __name__ == "__main__":
         save_screenshot_path=args.snapshot,
         show_window=not args.headless
     )
+

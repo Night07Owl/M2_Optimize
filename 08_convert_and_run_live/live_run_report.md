@@ -83,3 +83,4 @@ Live camera execution was tested over 60 continuous frames captured via the inte
 4. `model_validation.txt`: Quantitative validation summary.
 5. `screenshots/live_inference_capture.jpg`: Genuine live camera capture showing CPU telemetry overlay.
 6. `screenshots/live_inference_gpu_capture.jpg`: Genuine live camera capture showing DirectML GPU telemetry overlay.
+

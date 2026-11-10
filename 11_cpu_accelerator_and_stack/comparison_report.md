@@ -48,3 +48,4 @@ This report provides the empirical comparison between pure CPU inference and har
    CPU execution maintains a lean $126.9\text{ MB}$ footprint. GPU execution allocates approximately $304.8\text{ MB}$ of system RAM to manage DirectX 12 command queues, staging buffers, and driver DMA channels—a trivial fraction of the host's $16\text{ GB}$ system memory.
 4. **Thermal Stability:**  
    The RTX 5070 operated at an efficient $55.0\text{ °C}$ under sustained 120-run load (well below its thermal throttle threshold of $87\text{ °C}$), verifying sustained operational viability in industrial edge inspection environments.
+

@@ -78,3 +78,4 @@ cd "C:\Users\Sudhiksha\Downloads\Edge AI - Assignment 1"
 # 2. Run the fair benchmark suite (25 warm-ups, 120 timed runs)
 python 10_fair_benchmark/benchmark.py
 ```
+

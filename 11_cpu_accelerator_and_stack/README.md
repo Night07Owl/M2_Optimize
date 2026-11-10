@@ -41,3 +41,4 @@ cd "C:\Users\Sudhiksha\Downloads\Edge AI - Assignment 1"
 # 2. Re-generate architecture diagrams and comparison metrics
 python 11_cpu_accelerator_and_stack/generate_stack_diagram.py
 ```
+

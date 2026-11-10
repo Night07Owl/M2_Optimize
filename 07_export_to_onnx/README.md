@@ -83,3 +83,4 @@ python 07_export_to_onnx/validation.py
 # 4. Run test inference with visualization on camera first frame
 python training/inference.py --source 01_camera_and_repo/first_frame.jpg --model models/enclosure_detector_exported.onnx
 ```
+

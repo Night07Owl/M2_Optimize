@@ -72,3 +72,4 @@ def test_detector_switching_integration():
     res_orig = det_orig.detect(frame)
     assert isinstance(res_opt, list)
     assert isinstance(res_orig, list)
+
