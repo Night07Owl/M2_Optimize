@@ -1,0 +1,31 @@
+{
+  "active_model": "optimized",
+  "models": {
+    "original": {
+      "path": "models/enclosure_detector_base.onnx",
+      "format": "ONNX FP32",
+      "precision": "FP32",
+      "size_mb": 1.443,
+      "description": "Baseline unquantized M1 model (1.44 MB, Opset 17)"
+    },
+    "optimized": {
+      "path": "models/enclosure_detector_int8.onnx",
+      "format": "ONNX INT8",
+      "precision": "INT8",
+      "size_mb": 0.483,
+      "description": "M2 Dynamic 8-bit Integer Quantized model (0.48 MB, 66.5% reduction)"
+    }
+  },
+  "runtime": {
+    "prefer_gpu": true,
+    "confidence_threshold": 0.30,
+    "iou_threshold": 0.45,
+    "input_resolution": [640, 640]
+  },
+  "camera": {
+    "device_index": 0,
+    "width": 1280,
+    "height": 720,
+    "fps_target": 30
+  }
+}
