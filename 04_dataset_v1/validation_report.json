@@ -1,7 +1,0 @@
-{
-  "status": "PENDING_DATA",
-  "message": "Zero photographic images found in 'dataset/images'. Dataset requires physical camera captures.",
-  "total_images": 0,
-  "total_labels": 0,
-  "errors": []
-}

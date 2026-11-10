@@ -18,7 +18,7 @@ In accordance with assessment rules, the original M1 model was compared directly
 | **Precision** | **1.000** | **1.000** | **0.000** |
 | **Recall** | **1.000** | **1.000** | **0.000** |
 | **Model File Size** | **1.443 MB** | **0.483 MB** | **-66.54% (2.99x smaller)** |
-| **Mean CPU Latency** | **12.94 ms** | **13.24 ms** | **-0.31 ms faster** |
+| **Mean CPU Latency** | **7.57 ms** | **6.73 ms** | **0.84 ms faster** |
 | **Max Tensor Difference** | $0.0$ | $3.051758e-05$ | Minimal ($\le 10^{-4}$) |
 | **Mean Absolute Error (MAE)** | $0.0$ | $3.359568e-07$ | High precision preservation |
 

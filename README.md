@@ -22,22 +22,9 @@ Industrial Edge AI computer vision project for detecting the assembled enclosure
 
 ---
 
-## 2. Complete Deliverable Dossiers (Root Evidence Structure)
+## 2. Milestone 2 (M2 – OPTIMIZE) Deliverable Dossiers
 
-In accordance with official IDRP assessment requirements, all evidence dossiers reside directly at the repository root:
-
-### Milestone 1 (M1 – DETECT) Evidence Folders
-
-| Deliverable Folder | Milestone Title | Key Evidence Contained | Status |
-| :--- | :--- | :--- | :--- |
-| [`01_camera_and_repo/`](01_camera_and_repo/) | **Camera and Repository** | Genuine `first_frame.jpg` (1280x720), `camera_specification.json`, empirical test logs | **COMPLETE** |
-| [`02_opencv_pipeline/`](02_opencv_pipeline/) | **OpenCV Pipeline** | Live HUD overlays (`mode_a_pipeline.jpg`, `mode_b_pipeline.jpg`), demonstration instructions | **COMPLETE** |
-| [`03_baseline_speed/`](03_baseline_speed/) | **Baseline Speed** | 186-frame `benchmark_results.csv`, `latency_fps_chart.png`, `cpu_ram_chart.png` | **COMPLETE** |
-| [`04_dataset_v1/`](04_dataset_v1/) | **Dataset V1** | Dataset schema (`dataset.yaml`, `classes.txt`), annotator tool, validator report, dataset card | **PENDING DATA** |
-| [`05_correct_split/`](05_correct_split/) | **Correct Split** | 70/20/10 split policy, `split_distribution.png`, cross-split leakage verification | **PENDING DATA** |
-| [`06_train_and_run_detector/`](06_train_and_run_detector/) | **Train & Run Detector** | ONNX weights, prediction overlays (`pred_first_frame.jpg`), 10-error analysis framework | **PENDING TRAINING** |
-
-### Milestone 2 (M2 – OPTIMIZE) Evidence Folders
+In accordance with official IDRP assessment requirements, all six M2 evidence dossiers reside directly at the repository root:
 
 | Deliverable Folder | Milestone Title | Key Evidence Contained | Status |
 | :--- | :--- | :--- | :--- |
@@ -47,6 +34,8 @@ In accordance with official IDRP assessment requirements, all evidence dossiers 
 | [`10_fair_benchmark/`](10_fair_benchmark/) | **Fair Benchmark** | Batch 1, 25 warm-ups, 120 timed runs, median/P95 latencies, raw CSV telemetry | **COMPLETE** |
 | [`11_cpu_accelerator_and_stack/`](11_cpu_accelerator_and_stack/) | **CPU vs Accelerator & Stack** | `cpu_vs_accelerator.csv`, publication architecture diagram (`software_stack_diagram.png`) | **COMPLETE** |
 | [`12_own_target_and_tradeoff/`](12_own_target_and_tradeoff/) | **Own Target & Trade-Off** | `target_vs_actual.csv`, 8-question presentation script, 4 trade-off Pareto curves | **COMPLETE** |
+
+*(Note: Prior Milestone 1 deliverables [01–06] are maintained in the upstream repository: [Night07Owl/M1_Detect](https://github.com/Night07Owl/M1_Detect)).*
 
 📄 **Comprehensive M2 Completion Report:** [`M2_COMPLETION_REPORT.md`](M2_COMPLETION_REPORT.md)  
 📄 **Lecturer Presentation Notes:** [`M2_PRESENTATION_NOTES.md`](M2_PRESENTATION_NOTES.md)  

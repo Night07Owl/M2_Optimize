@@ -49,6 +49,9 @@ def evaluate_optimized_and_compare(
     if not has_custom_test_set:
         print("[!] Note: 0 images in 'dataset/images/test'. Using real camera captures as test set.")
         test_samples = [
+            "test_samples/first_frame.jpg",
+            "test_samples/mode_a_pipeline.jpg",
+            "test_samples/mode_b_pipeline.jpg",
             "01_camera_and_repo/first_frame.jpg",
             "02_opencv_pipeline/mode_a_pipeline.jpg",
             "02_opencv_pipeline/mode_b_pipeline.jpg",

@@ -4,7 +4,7 @@ Format,ONNX (Opset 17),ONNX (Opset 17),Identical
 Input Shape,"[1, 3, 640, 640]","[1, 3, 640, 640]",0
 Output Shape,"[1, 5, 8400]","[1, 5, 8400]",0
 File Size (bytes),1513427,1514002,575
-Inference Latency (ms),5.23,4.98,-0.25
+Inference Latency (ms),5.75,6.21,0.46
 Max Absolute Error,0.0,9.15527344e-05,9.15527344e-05
 Mean Absolute Error (MAE),0.0,1.46718039e-05,1.46718039e-05
 RMSE,0.0,2.04350454e-05,2.04350454e-05

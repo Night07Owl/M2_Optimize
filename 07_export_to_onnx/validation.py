@@ -16,12 +16,18 @@ import cv2
 def validate_onnx_model(
     base_model_path="models/enclosure_detector_base.onnx",
     exported_model_path="models/enclosure_detector_exported.onnx",
-    test_image_path="01_camera_and_repo/first_frame.jpg",
+    test_image_path=None,
     output_dir="07_export_to_onnx"
 ):
     os.makedirs(output_dir, exist_ok=True)
     screenshot_dir = os.path.join(output_dir, "screenshots")
     os.makedirs(screenshot_dir, exist_ok=True)
+    
+    if test_image_path is None or not os.path.exists(test_image_path):
+        for candidate in ["test_samples/first_frame.jpg", "01_camera_and_repo/first_frame.jpg"]:
+            if os.path.exists(candidate):
+                test_image_path = candidate
+                break
     
     print("=" * 70)
     print("M2 TASK 1: VALIDATING EXPORTED ONNX MODEL")

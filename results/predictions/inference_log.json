@@ -1,9 +1,0 @@
-[
-  {
-    "image": "first_frame.jpg",
-    "latency_ms": 19.06,
-    "enclosures_detected": 0,
-    "detections": [],
-    "output_saved": "results/predictions\\pred_first_frame.jpg"
-  }
-]

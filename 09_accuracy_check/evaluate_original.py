@@ -12,7 +12,21 @@ import json
 import cv2
 import numpy as np
 from pipeline.detector import EnclosureDetector
-from dataset.annotate_dataset import convert_from_yolo
+
+def convert_from_yolo(yolo_line, img_w, img_h):
+    try:
+        parts = yolo_line.strip().split()
+        if len(parts) >= 5:
+            cls_id = int(parts[0])
+            cx, cy, w, h = [float(v) for v in parts[1:5]]
+            x1 = int((cx - w / 2) * img_w)
+            y1 = int((cy - h / 2) * img_h)
+            x2 = int((cx + w / 2) * img_w)
+            y2 = int((cy + h / 2) * img_h)
+            return {"class_id": cls_id, "box": [x1, y1, x2, y2]}
+    except Exception:
+        pass
+    return None
 
 def evaluate_original_model(
     model_path="models/enclosure_detector_base.onnx",
@@ -40,6 +54,9 @@ def evaluate_original_model(
         print(f"[!] Note: Zero images found in test split directory '{test_images_dir}'.")
         print("    Evaluating baseline model on available genuine camera test captures...")
         camera_samples = [
+            "test_samples/first_frame.jpg",
+            "test_samples/mode_a_pipeline.jpg",
+            "test_samples/mode_b_pipeline.jpg",
             "01_camera_and_repo/first_frame.jpg",
             "02_opencv_pipeline/mode_a_pipeline.jpg",
             "02_opencv_pipeline/mode_b_pipeline.jpg"
