@@ -1,0 +1,16 @@
+=================================================================
+M2 TASK 2: INT8 MODEL VALIDATION SPECIFICATION
+=================================================================
+Target Artifact: models/enclosure_detector_int8.onnx
+Quantization Type: Dynamic 8-bit Integer (QInt8)
+Input Shape: [1, 3, 640, 640]
+Output Shape: [1, 5, 8400]
+Original FP32 Size: 1513427 bytes (1.44 MB)
+Optimized INT8 Size: 506395 bytes (0.48 MB)
+Size Reduction: 66.54%
+Compression Ratio: 2.99x
+Single-Sample Latency: 10.36 ms
+Max Absolute Error: 3.05175781e-05
+MAE: 2.36473602e-06
+RMSE: 6.40717690e-06
+Status: VALIDATED FOR LIVE INFERENCE
