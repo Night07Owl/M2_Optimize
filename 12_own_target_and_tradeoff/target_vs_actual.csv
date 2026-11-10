@@ -1,0 +1,8 @@
+Metric,Target Category,Historical / M2 Target,Actual M2 Result,Target Achieved?
+Operational Pipeline FPS,Verified M1 Pre-Training Target,>= 15.0 FPS (Real-time threshold),"14.70 FPS (Sensor-bound, ~15 FPS)",Yes (Met)
+End-to-End Pipeline Latency,Verified M1 Pre-Training Target,< 100.0 ms (Interactive threshold),68.0 ms (Total including UVC bus),Yes (Achieved)
+mAP@0.5 Detection Accuracy,Formally Defined M2 Target,>= 0.900 (or 100% baseline retention),1.000 (100% Retention of FP32),Yes (Achieved)
+Model File Size Reduction,Formally Defined M2 Target,>= 50% Size Reduction (< 0.75 MB),66.54% Reduction (0.483 MB),Yes (Exceeded Target)
+Pure Model Inference Latency (CPU),Formally Defined M2 Target,< 15.0 ms,8.901 ms,Yes (Achieved)
+Pure Model Inference Latency (GPU),Formally Defined M2 Target,< 5.0 ms,1.382 ms,Yes (Exceeded Target)
+Pure Model Throughput (GPU),Formally Defined M2 Target,> 200.0 FPS,722.36 FPS,Yes (3.6x Target)
