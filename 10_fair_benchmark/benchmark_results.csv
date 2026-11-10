@@ -1,0 +1,5 @@
+Configuration,Hardware Provider,Batch Size,Warm-ups,Timed Runs,Median Latency (ms),P95 Latency (ms),Avg Latency (ms),Std Dev (ms),FPS (Throughput),Model Size (MB),CPU Load (%),RAM RSS (MB),GPU Load (%),GPU Temp (C)
+Original Model (CPU),CPUExecutionProvider,1,25,120,3.19,4.01,3.309,0.386,302.24,1.443,51.57,149.78,0.0,47.0
+Optimized Model (CPU),CPUExecutionProvider,1,25,120,8.901,9.734,8.659,0.898,115.48,0.483,50.85,126.94,0.0,47.0
+Original Model (DirectML GPU),DmlExecutionProvider,1,25,120,0.711,0.796,0.722,0.05,1384.87,1.443,9.93,286.07,0.0,47.0
+Optimized Model (DirectML GPU),DmlExecutionProvider,1,25,120,1.382,1.457,1.384,0.043,722.36,0.483,9.39,304.87,49.0,55.0

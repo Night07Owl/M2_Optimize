@@ -1,0 +1,11 @@
+=================================================================
+M2 FAIR BENCHMARK — HARDWARE SPECIFICATIONS
+=================================================================
+OS: win32 (Windows 11 Home 64-bit)
+Python: 3.11.9 (64-bit CPython)
+CPU: AMD Ryzen 9 8940HX with Radeon Graphics (16C / 32T)
+System Memory: 15.21 GB Total
+GPU Accelerator: NVIDIA GeForce RTX 5070 Laptop GPU (12,227 MiB VRAM)
+GPU Driver: 617.42 | Direct3D 12 Feature Level 12_2
+ONNX Runtime: onnxruntime-directml 1.24.4
+Available ORT Providers: ['DmlExecutionProvider', 'CPUExecutionProvider']
