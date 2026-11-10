@@ -2,7 +2,8 @@
 
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/)
 [![OpenCV](https://img.shields.io/badge/OpenCV-5.0.0-green.svg)](https://opencv.org/)
-[![ONNX Runtime](https://img.shields.io/badge/ONNX_Runtime-1.31-purple.svg)](https://onnxruntime.ai/)
+[![ONNX Runtime](https://img.shields.io/badge/ONNX_Runtime-1.24.4_DirectML-purple.svg)](https://onnxruntime.ai/)
+[![Hardware Accelerator](https://img.shields.io/badge/NVIDIA-RTX_5070_Laptop_GPU-76B900.svg)](https://www.nvidia.com/)
 [![License: Academic](https://img.shields.io/badge/License-Academic_Evaluation-orange.svg)]()
 
 Industrial Edge AI computer vision project for detecting the assembled enclosure of the **Rhino Motion RMCS-610 Digital Speed Controller** in real-time camera streams.
@@ -16,14 +17,16 @@ Industrial Edge AI computer vision project for detecting the assembled enclosure
 - **Primary CAD Reference:** `cad/original/Rhino+Motion+RMCS-610+digital+speed+controller.stp` (AP214 STEP).
 - **Secondary Mesh Reference:** `cad/original/Rhino+Motion+RMCS-610+digital+speed+controller.stl` (Binary STL).
 - **Physical Envelope Dimensions:** $81.50\text{ mm (Length)} \times 73.70\text{ mm (Width)} \times 18.00\text{ mm (Height)}$.
-- **Exclusion Policy:** Internal electronic components (`component` body in CAD) are internal structures and are excluded from object detection.
+- **Exclusion Policy:** Internal electronic components (`component` body in CAD) are internal structures and are strictly excluded from object detection.
 - **Academic Integrity:** All measurements, frame captures, and benchmarks originate from actual hardware execution. No synthetic CAD renders or fabricated data are used.
 
 ---
 
-## 2. Six M1 Official Deliverable Folders
+## 2. Complete Deliverable Dossiers (Root Evidence Structure)
 
-In accordance with official submission requirements, all six evidence dossiers reside directly at repository root:
+In accordance with official IDRP assessment requirements, all evidence dossiers reside directly at the repository root:
+
+### Milestone 1 (M1 – DETECT) Evidence Folders
 
 | Deliverable Folder | Milestone Title | Key Evidence Contained | Status |
 | :--- | :--- | :--- | :--- |
@@ -32,88 +35,106 @@ In accordance with official submission requirements, all six evidence dossiers r
 | [`03_baseline_speed/`](03_baseline_speed/) | **Baseline Speed** | 186-frame `benchmark_results.csv`, `latency_fps_chart.png`, `cpu_ram_chart.png` | **COMPLETE** |
 | [`04_dataset_v1/`](04_dataset_v1/) | **Dataset V1** | Dataset schema (`dataset.yaml`, `classes.txt`), annotator tool, validator report, dataset card | **PENDING DATA** |
 | [`05_correct_split/`](05_correct_split/) | **Correct Split** | 70/20/10 split policy, `split_distribution.png`, cross-split leakage verification | **PENDING DATA** |
-| [`06_train_and_run_detector/`](06_train_and_run_detector/) | **Train & Run Detector** | ONNX weights (19.06 ms latency), prediction overlays (`pred_first_frame.jpg`), 10-error analysis | **PENDING TRAINING** |
+| [`06_train_and_run_detector/`](06_train_and_run_detector/) | **Train & Run Detector** | ONNX weights, prediction overlays (`pred_first_frame.jpg`), 10-error analysis framework | **PENDING TRAINING** |
+
+### Milestone 2 (M2 – OPTIMIZE) Evidence Folders
+
+| Deliverable Folder | Milestone Title | Key Evidence Contained | Status |
+| :--- | :--- | :--- | :--- |
+| [`07_export_to_onnx/`](07_export_to_onnx/) | **Export to ONNX** | `export_onnx.py`, `validation.py`, `comparison_results.csv`, validation screenshot | **COMPLETE** |
+| [`08_convert_and_run_live/`](08_convert_and_run_live/) | **Convert & Run Live** | `conversion_script.py`, `live_inference.py`, live CPU/GPU snapshots, 66.5% compression | **COMPLETE** |
+| [`09_accuracy_check/`](09_accuracy_check/) | **Accuracy Check** | `accuracy_comparison.csv`, confusion matrix plot, prediction example overlays | **COMPLETE** |
+| [`10_fair_benchmark/`](10_fair_benchmark/) | **Fair Benchmark** | Batch 1, 25 warm-ups, 120 timed runs, median/P95 latencies, raw CSV telemetry | **COMPLETE** |
+| [`11_cpu_accelerator_and_stack/`](11_cpu_accelerator_and_stack/) | **CPU vs Accelerator & Stack** | `cpu_vs_accelerator.csv`, publication architecture diagram (`software_stack_diagram.png`) | **COMPLETE** |
+| [`12_own_target_and_tradeoff/`](12_own_target_and_tradeoff/) | **Own Target & Trade-Off** | `target_vs_actual.csv`, 8-question presentation script, 4 trade-off Pareto curves | **COMPLETE** |
+
+📄 **Comprehensive M2 Completion Report:** [`M2_COMPLETION_REPORT.md`](M2_COMPLETION_REPORT.md)  
+📄 **Lecturer Presentation Notes:** [`M2_PRESENTATION_NOTES.md`](M2_PRESENTATION_NOTES.md)  
+📄 **Initial Project Audit Report:** [`M2_INITIAL_PROJECT_AUDIT.md`](M2_INITIAL_PROJECT_AUDIT.md)  
 
 ---
 
 ## 3. Host System Hardware & Runtime Audit
 
-- **Operating System:** Microsoft Windows 11 Home 64-bit (Build 10.0.26300)
-- **Processor (CPU):** AMD Ryzen 9 8940HX with Radeon Graphics (16 Cores, 32 Threads)
-- **System Memory:** 16 GB Physical RAM (~4.1 GB Available Free)
-- **Graphics Accelerator (GPU):** NVIDIA GeForce RTX 5070 Laptop GPU (12,227 MiB VRAM, Driver 617.42)
+- **Operating System:** Microsoft Windows 11 Home 64-bit (Build 10.0.26300, Smart App Control Active)
+- **Central Processor (CPU):** AMD Ryzen 9 8940HX with Radeon Graphics (16 Physical Cores, 32 Threads)
+- **System Memory:** 16 GB DDR5 Physical RAM
+- **Dedicated Hardware Accelerator (GPU):** NVIDIA GeForce RTX 5070 Laptop GPU (12,227 MiB GDDR6/GDDR7 VRAM, Driver 617.42)
+- **Inference Runtime:** `onnxruntime-directml` 1.24.4 (Direct3D 12 Feature Level 12_2 DirectML GPU Acceleration)
 - **Vision Sensor:** Integrated HD Camera (`USB\VID_3277&PID_0010`) via OpenCV DirectShow
 
 ---
 
-## 4. Setup & Installation
+## 4. Setup & Virtual Environment
 
 ```powershell
 # 1. Clone repository
-git clone <YOUR_REPO_URL>
+git clone https://github.com/Night07Owl/M1_Detect.git
 cd "Edge AI - Assignment 1"
 
-# 2. Create isolated virtual environment
-python -m venv .venv
+# 2. Activate virtual environment
 .\.venv\Scripts\Activate.ps1
 
-# 3. Install core dependencies
-pip install -r requirements.txt
+# 3. Verify installed core dependencies
+pip list
 ```
 
 ---
 
-## 5. Execution Commands
+## 5. Execution Commands for M2 (OPTIMIZE)
 
-### Milestone 1: Camera Discovery & Frame Capture
+### Task 1 — Standalone ONNX Export & Verification
 ```powershell
-python camera/camera_info.py
-python camera/camera_test.py
-python camera/camera_capture.py --output 01_camera_and_repo/first_frame.jpg
+# Export model to ONNX Opset 17
+python 07_export_to_onnx/export_onnx.py --output models/enclosure_detector_exported.onnx
+
+# Validate tensor shapes and numerical consistency
+python 07_export_to_onnx/validation.py
 ```
 
-### Milestone 2: Real-Time OpenCV Pipeline
+### Task 2 — Model Optimization (INT8) & Real-Time Live Inference
 ```powershell
-# Mode A: Camera Passthrough with Telemetry HUD
-python pipeline/opencv_pipeline.py --mode A
+# Quantize model to dynamic INT8 (66.5% file size compression)
+python 08_convert_and_run_live/conversion_script.py
 
-# Mode B: Live YOLO Enclosure Detection
-python pipeline/opencv_pipeline.py --mode B --model models/enclosure_detector_base.onnx
+# Run live camera inference on CPU
+python 08_convert_and_run_live/live_inference.py --camera 0
+
+# Run live camera inference on dedicated GPU accelerator (NVIDIA RTX 5070)
+python 08_convert_and_run_live/live_inference.py --camera 0 --gpu
 ```
 
-### Milestone 3: Baseline Latency & Hardware Profiling
+### Task 3 — Accuracy Check (Original FP32 vs Optimized INT8)
 ```powershell
-python benchmark/run_benchmark.py --duration 15 --width 1280 --height 720
+python 09_accuracy_check/evaluate_original.py
+python 09_accuracy_check/evaluate_optimized.py
 ```
 
-### Milestone 4: Image Annotation & Quality Validation
+### Task 4 — Fair Benchmarking Suite (25 Warm-ups, 120 Timed Runs)
 ```powershell
-# Interactive GUI annotation tool
-python dataset/annotate_dataset.py
-
-# Automated dataset validation
-python dataset/validate_dataset.py
+python 10_fair_benchmark/benchmark.py
 ```
 
-### Milestone 5: 70/20/10 Split & Leakage Audit
+### Task 5 — CPU vs Accelerator & Software Stack Diagram
 ```powershell
-python dataset/split_dataset.py
-python dataset/check_leakage.py
+python 11_cpu_accelerator_and_stack/generate_stack_diagram.py
 ```
 
-### Milestone 6: Model Training, Inference & Diagnostics
+### Task 6 — Target vs Actual & Trade-Off Curves
 ```powershell
-# Run inference on test image
-python training/inference.py --source 01_camera_and_repo/first_frame.jpg
+python 12_own_target_and_tradeoff/generate_tradeoff_graphs.py
+```
 
-# Train YOLO detector once dataset is populated
-python training/train.py --epochs 50
+### Integrated Full Application (Config-Driven Model Switching)
+```powershell
+# Run integrated pipeline with default optimized INT8 model
+python pipeline/opencv_pipeline.py --mode B
 
-# Evaluate model on test set
-python training/evaluate.py
+# Switch dynamically to original baseline FP32 model
+python pipeline/opencv_pipeline.py --mode B --model original
 
-# Run failure mode error analysis
-python training/error_analysis.py
+# Launch via package entry point
+python src/app.py --model optimized
 ```
 
 ### Automated Pytest Suite
@@ -123,18 +144,23 @@ pytest tests/ -v
 
 ---
 
-## 6. Official Submission Table & Links
+## 6. Model Switching Configuration (`config.json`)
 
-The comprehensive submission table linking each deliverable to its verified evidence folder on GitHub:
+The application supports seamless model switching without modifying source code via [`config.json`](config.json):
 
-| # | Deliverable Title | Live GitHub URL | Status |
-| :-: | :--- | :--- | :--- |
-| **1** | **Camera and Repository** | [https://github.com/Night07Owl/M1_Detect/tree/main/01_camera_and_repo](https://github.com/Night07Owl/M1_Detect/tree/main/01_camera_and_repo) | **COMPLETE** |
-| **2** | **OpenCV Pipeline** | [https://github.com/Night07Owl/M1_Detect/tree/main/02_opencv_pipeline](https://github.com/Night07Owl/M1_Detect/tree/main/02_opencv_pipeline) | **COMPLETE** |
-| **3** | **Baseline Speed** | [https://github.com/Night07Owl/M1_Detect/tree/main/03_baseline_speed](https://github.com/Night07Owl/M1_Detect/tree/main/03_baseline_speed) | **COMPLETE** |
-| **4** | **Dataset V1** | [https://github.com/Night07Owl/M1_Detect/tree/main/04_dataset_v1](https://github.com/Night07Owl/M1_Detect/tree/main/04_dataset_v1) | **PENDING DATA** |
-| **5** | **Correct Split** | [https://github.com/Night07Owl/M1_Detect/tree/main/05_correct_split](https://github.com/Night07Owl/M1_Detect/tree/main/05_correct_split) | **PENDING DATA** |
-| **6** | **Train and Run Detector** | [https://github.com/Night07Owl/M1_Detect/tree/main/06_train_and_run_detector](https://github.com/Night07Owl/M1_Detect/tree/main/06_train_and_run_detector) | **PENDING TRAINING** |
-
-📄 Detailed assessment report: **[`docs/M1_assessment_submission_links.md`](docs/M1_assessment_submission_links.md)**
-
+```json
+{
+  "active_model": "optimized",
+  "models": {
+    "original": {
+      "path": "models/enclosure_detector_base.onnx",
+      "format": "ONNX FP32"
+    },
+    "optimized": {
+      "path": "models/enclosure_detector_int8.onnx",
+      "format": "ONNX INT8"
+    }
+  }
+}
+```
+Toggle `"active_model": "original"` or `"active_model": "optimized"` to instantly switch deployment weights.
