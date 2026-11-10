@@ -5,7 +5,7 @@
 **Author:** Individual IDRP Candidate  
 **Date of Audit:** November 10, 2026  
 **Audited Directory:** `C:\Users\Sudhiksha\Downloads\Edge AI - Assignment 1`  
-**Git Branch:** `main` (Remote: `https://github.com/Night07Owl/M1_Detect.git`)  
+**Git Branch:** `main` (Inherited Remote: `https://github.com/Night07Owl/M1_Detect.git` | Target M2 Remote: `https://github.com/Night07Owl/M2_Optimize.git`)  
 
 ---
 
@@ -198,3 +198,4 @@ To fulfill the six official assessment criteria of Milestone 2 (OPTIMIZE), the f
    - Integrate model switching configuration (`config.json`) into the live pipeline.
    - Produce root-level `M2_COMPLETION_REPORT.md` and `M2_PRESENTATION_NOTES.md`.
    - Create incremental Git commits for every assessment milestone.
+

@@ -5,7 +5,7 @@
 **Author:** Individual IDRP Candidate  
 **Date of Completion:** November 10, 2026  
 **Repository Path:** `C:\Users\Sudhiksha\Downloads\Edge AI - Assignment 1`  
-**Git Branch:** `main` (Remote: `https://github.com/Night07Owl/M1_Detect.git`)  
+**Git Branch:** `main` (Remote: `https://github.com/Night07Owl/M2_Optimize.git`)  
 
 ---
 
@@ -229,3 +229,4 @@ LIVE HUD TELEMETRY & DISPLAY (Instant FPS, Latency, Target Count)
 | **Own Target and Trade-Off** | Verified targets, actual results, and simple explanation | **COMPLETE** | `12_own_target_and_tradeoff/`, Commit `bd75cff` |
 
 **Milestone 2 (OPTIMIZE) Status:** **100% COMPLETE & AUDITED**
+

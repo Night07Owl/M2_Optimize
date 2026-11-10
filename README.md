@@ -69,7 +69,7 @@ In accordance with official IDRP assessment requirements, all evidence dossiers 
 
 ```powershell
 # 1. Clone repository
-git clone https://github.com/Night07Owl/M1_Detect.git
+git clone https://github.com/Night07Owl/M2_Optimize.git
 cd "Edge AI - Assignment 1"
 
 # 2. Activate virtual environment
