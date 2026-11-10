@@ -1,0 +1,21 @@
+=================================================================
+M2 TASK 5: HARDWARE & ACCELERATOR AUDIT
+=================================================================
+CENTRAL PROCESSING UNIT (CPU):
+  - Model: AMD Ryzen 9 8940HX with Radeon Graphics
+  - Physical Cores: 16 | Logical Processors: 32
+  - Instruction Sets: x86-64, AVX2, AVX-512, FMA3, SSE4.2
+  - System Memory: 16 GB DDR5 (15,951,668 KB visible)
+
+DEDICATED GRAPHICS ACCELERATOR (GPU):
+  - Model: NVIDIA GeForce RTX 5070 Laptop GPU
+  - Dedicated Video Memory (VRAM): 12,227 MiB GDDR6/GDDR7
+  - Driver Version: 617.42 | Driver Model: WDDM
+  - DirectX 12 Feature Level: 12_2
+  - Idle Temperature: 45.0 °C | Max Temperature: 55.0 °C
+
+INFERENCE RUNTIME ACCELERATION ENGINE:
+  - Primary Framework: onnxruntime-directml 1.24.4
+  - Active Execution Provider: DmlExecutionProvider
+  - CPU Execution Provider: CPUExecutionProvider
+  - Security Policy Status: Microsoft-Signed (Smart App Control Validated)
