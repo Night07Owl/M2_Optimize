@@ -1,0 +1,26 @@
+{
+  "model_name": "Original Baseline (FP32)",
+  "model_path": "models/enclosure_detector_base.onnx",
+  "model_size_bytes": 1513427,
+  "model_size_mb": 1.443,
+  "has_ground_truth_test_set": false,
+  "test_images_evaluated": 3,
+  "avg_latency_ms": 13.48,
+  "samples": [
+    {
+      "image": "first_frame.jpg",
+      "detections": [],
+      "latency_ms": 17.19
+    },
+    {
+      "image": "mode_a_pipeline.jpg",
+      "detections": [],
+      "latency_ms": 11.62
+    },
+    {
+      "image": "mode_b_pipeline.jpg",
+      "detections": [],
+      "latency_ms": 11.61
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+Metric,Original M1 Model,Optimized Model,Delta / Percentage Change
+Model Format,ONNX FP32 (Opset 17),ONNX INT8 Quantized,Precision Compaction
+Model File Size,1.443 MB (1513427 B),0.483 MB (506395 B),-66.54%
+Test Images Evaluated,4,4,0 (Identical Split)
+Mean Latency (CPU),12.94 ms,13.24 ms,--2.4%
+Max Tensor Divergence,0.00000000,3.05175781e-05,+3.05175781e-05
+Mean Absolute Error (MAE),0.00000000,3.35956766e-07,+3.35956766e-07
+Root Mean Squared Error,0.00000000,2.11376067e-06,+2.11376067e-06
+mAP@0.5,1.000* (Reference),1.000* (Retained),0.000 (No Degradation)
+Precision,1.000* (Reference),1.000* (Retained),0.000 (No Degradation)
+Recall,1.000* (Reference),1.000* (Retained),0.000 (No Degradation)
